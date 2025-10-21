@@ -10,30 +10,33 @@ string = "this is a string"
 def calculate(opp,var1,var2):  #deffine function name, and give names for function paramiters
     if opp == "+": #checking if opp is equal to + not assigning + as a value to opp
         output = var1 + var2 
-        print(output)  #if you want to just print the value you get you can just print it
+        # print(output)  #if you want to just print the value you get you can just print it
         return output #return sets the value of your function equal to its variables        
     if opp == "-":
-        var1-var2=output
+        output = var1-var2
         return output
     if opp == "*":
-        var1*var2=output
+        output = var1*var2
         return output
     if opp == "/":
-        var1/var2=output
-        return output
+        output = var1/var2
+        return output, var1, var2
     else:
         print("opperator not recognised try again")
 
-    
+    # function = output, var1, var2
 
 
-calculate(opp="+",var1=2,var2=3)
+# calculate(opp="+",var1=2,var2=3)
 
 opp = "+"
 number1 = 2
 number2 = 3
-output_of_calculator = calculate(opp,number1,number1)
-print(output_of_calculator)
+# output_of_calculator = calculate(opp,number1,number1)
+# print(output_of_calculator)
+
+#or you can do
+print(f"the answer is {calculate(opp,number1,number2)}")
 
 
 
