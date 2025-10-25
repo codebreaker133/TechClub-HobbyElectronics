@@ -7,7 +7,7 @@ from adafruit_display_text import label
 #from displayio import I2CDisplay as I2CDisplayBus
 import terminalio
 # Release display resources at the start
-displayio.release_displays()
+displayio.release_displays() #required for program to work more than once
 
 
 print("All modules loaded successfully")
@@ -29,8 +29,8 @@ display.root_group = splash
 
 def write_to_display(text):
     splash.pop() if len(splash) > 0 else None
-    text_area = label.Label(terminalio.FONT, text=text, color=0xFFFFFF, x=32, y=45, scale=2)
-    splash.append(text_area)
+    text_area = label.Label(terminalio.FONT, text=text, color=0xFFFFFF, x=32, y=45, scale=2) #creats formated text
+    splash.append(text_area) #writes formated text to display
 for i in range(5):
     write_to_display('hello\nworld!')
     sleep(2)
