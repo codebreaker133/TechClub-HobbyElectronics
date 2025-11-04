@@ -22,7 +22,6 @@ EINK_BUSY = board.GPIO14 # eink busy pin
 DISPLAY_WIDTH = 300
 DISPLAY_HIGHT = 400
 ROTATION = 0
-HILIGHT_COLOR = 0X000000
 print("all pins assigned and values ready to be entered")
 SPI = busio.SPI(SPI_CLOCK, SPI_MOSI, SPI_MISO) #define clock and data pins for SPI bus (used to talk to display)
 print("SPI bus created, connecting to display")
